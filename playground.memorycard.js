@@ -35,20 +35,20 @@
     var MemoryCard = function (app) {
         this.app = app;
         this.ls = window.localStorage;
-        this.app.on('ready', this.handleDefaults.bind(this));
+        this.app.on('ready', handleDefaults.bind(this));
         return this;
     };
     PLAYGROUND.MemoryCard = MemoryCard;
     var plugin = PLAYGROUND.MemoryCard;
+    var handleDefaults = function () {
+        var self = this;
+        self.app.loader.on('load', function (id) {
+            self.save(self.app.data.defaults);
+        });
+        self.app.loadData('defaults');
+    };
     plugin.plugin = true;
     plugin.prototype = {
-        handleDefaults: function () {
-            var self = this;
-            this.app.loader.on('load', function (id) {
-                self.save(self.app.data.defaults);
-            });
-            this.app.loadData('defaults');
-        },
         getAll: function () {
             var self = this;
             var index = 0;
