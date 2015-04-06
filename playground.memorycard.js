@@ -36,6 +36,9 @@
         this.app = app;
         this.ls = window.localStorage;
         this.app.on('ready', handleDefaults.bind(this));
+        // This is a workaround to have access to the plugin.
+        // It should be done automatically, instead of extending Application.
+        app.memorycard = this;
         return this;
     };
     PLAYGROUND.MemoryCard = MemoryCard;
