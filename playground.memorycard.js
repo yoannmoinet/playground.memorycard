@@ -63,9 +63,6 @@
             }
             return data;
         },
-        get: function (key) {
-            return this.ls.getItem(key);
-        },
         save: function (key, value, overwrite) {
             if (typeof key === 'object') {
                 overwrite = value;
@@ -75,7 +72,7 @@
                 }
                 return;
             }
-            var previous = this.get(key);
+            var previous = this.load(key);
             if (typeof value !== 'string') {
                 value = JSON.stringify(value);
             }
