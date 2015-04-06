@@ -1,0 +1,28 @@
+{
+  "name": "playground.memorycard",
+  "main": "playground.memorycard.js",
+  "version": "1.0.0",
+  "homepage": "https://github.com/yoannmoinet/playground.memorycard",
+  "authors": [
+    "Yoann Moinet <yoann.moinet@gmail.com>"
+  ],
+  "description": "A plugin for Playground to allow persistence.",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "localStorage",
+    "persistence",
+    "playground"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
