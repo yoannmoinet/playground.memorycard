@@ -82,7 +82,12 @@
         },
         load: function (key) {
             if (key) {
-                return this.ls.getItem(key);
+                var value = this.ls.getItem(key);
+                try {
+                    return JSON.parse(value);
+                } catch (e) {
+                    return value;
+                }
             }
             return this.getAll();
         },
