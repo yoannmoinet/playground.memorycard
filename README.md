@@ -1,6 +1,9 @@
 # playground.memorycard
 
-A plugin for Playground to allow persistence.
+A plugin for [PlaygroundJS](http://playgroundjs.com) to allow persistence.
+
+[![npm version](https://img.shields.io/npm/v/playground.memorycard.svg?style=flat)](http://badge.fury.io/js/playground.memorycard)
+[![bower version](https://img.shields.io/bower/v/playground.memorycard.svg?style=flat)](http://bower.io/search/?q=playground.memorycard)
 
 ## Installation
 
